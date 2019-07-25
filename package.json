@@ -1,0 +1,28 @@
+{
+	"name": "@noltron000/numbers",
+	"version": "0.0.0",
+	"description": "a package library for numbers :)",
+	"main": "numbers.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/noltron000/numbers.git"
+	},
+	"keywords": [
+		"number",
+		"numbers",
+		"math",
+		"mathematics"
+	],
+	"author": "noltron000",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/noltron000/numbers/issues"
+	},
+	"homepage": "https://github.com/noltron000/numbers#readme",
+	"devDependencies": {
+		"eslint": "^6.1.0"
+	}
+}
