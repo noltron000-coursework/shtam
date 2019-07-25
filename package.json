@@ -4,9 +4,9 @@
 	"description": "a package library for numbers :)",
 	"main": "numbers.js",
 	"scripts": {
-		"test": "jest"
+		"test": "jest",
+		"coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
 	},
-	"coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/noltron000/numbers.git"
