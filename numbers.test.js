@@ -1,4 +1,4 @@
-const fizzbuzz = require('./fizzbuzz.js')
+const numbers = require('./numbers.js')
 
 test('sanity check', () => {})
 
