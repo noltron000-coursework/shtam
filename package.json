@@ -5,7 +5,7 @@
 	"main": "numbers.js",
 	"scripts": {
 		"test": "jest",
-		"coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
+		"coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
 	},
 	"repository": {
 		"type": "git",
