@@ -20,7 +20,7 @@ const factorial = (n: number): number => {
 
 
 const factorialMemo = (n: number): number[] => {
-	let productList: number[]
+	let productList: number[] = []
 
 	const memo = (i: number): number => {
 		let product: number
@@ -43,7 +43,7 @@ const factorialMemo = (n: number): number[] => {
 	}
 
 	// get a range of numbers from 0 to n+1
-	const range: number[] = [...Array(n + 1).keys()]
+	const range: number[] = Array.from(Array(n + 1).keys())
 
 	// find factorial for each item
 	range.forEach((i: number) => {
@@ -57,20 +57,19 @@ const factorialMemo = (n: number): number[] => {
 
 const eulersNumber = (precision: number): number => {
 	let e: number = 0
+	// need every factorial from 0 to n
 	const factorialList: number[] = factorialMemo(precision)
+	// loop through each factorial and add 1/n! to e
 	factorialList.forEach((n: number) => {
 		e += 1 / n
 	})
 	return e
 }
 
-
 export const π: number = Math.PI
 export const ε: number = eulersNumber(100)
 export const φ: number = (1 + Math.sqrt(5)) / 2
-console.log(π)
-console.log(ε)
-console.log(φ)
+
 export const PI: number = π
 export const EULER: number = ε
 export const GOLDEN: number = φ

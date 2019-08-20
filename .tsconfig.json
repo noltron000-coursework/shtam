@@ -5,6 +5,9 @@
 		"outDir": "./esm",
 		"module": "es6",
 		"target": "es6",
+		"lib": [
+			"es6"
+		],
 		"noImplicitAny": true,
 		"moduleResolution": "node"
 	},

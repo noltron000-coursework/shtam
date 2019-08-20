@@ -18,7 +18,7 @@ var factorial = function (n) {
     return product;
 };
 var factorialMemo = function (n) {
-    var productList;
+    var productList = [];
     var memo = function (i) {
         var product;
         // base case
@@ -37,7 +37,7 @@ var factorialMemo = function (n) {
         return product;
     };
     // get a range of numbers from 0 to n+1
-    var range = Array(n + 1).keys().slice();
+    var range = Array.from(Array(n + 1).keys());
     // find factorial for each item
     range.forEach(function (i) {
         var product = memo(i);
@@ -48,7 +48,9 @@ var factorialMemo = function (n) {
 };
 var eulersNumber = function (precision) {
     var e = 0;
+    // need every factorial from 0 to n
     var factorialList = factorialMemo(precision);
+    // loop through each factorial and add 1/n! to e
     factorialList.forEach(function (n) {
         e += 1 / n;
     });
