@@ -2,16 +2,16 @@
 exports.__esModule = true;
 var factorial = function (n) {
     var product;
-    // base case
     if (n === 1 || n === 0) {
+        // base case
         product = n;
-        // larger positive number
     }
     else if (n > 1) {
+        // larger positive number
         product = n * factorial(n - 1);
-        // some other wierd case
     }
     else {
+        // some other wierd case
         product = NaN;
     }
     // finally, return result
@@ -21,16 +21,16 @@ var factorialMemo = function (n) {
     var productList = [];
     var memo = function (i) {
         var product;
-        // base case
         if (i === 0 || i === 1) {
+            // base case
             product = 1;
-            // larger positive number
         }
         else if (n > 1) {
+            // larger positive number
             product = i * productList[i - 1];
-            // some other wierd case
         }
         else {
+            // some other wierd case
             product = NaN;
         }
         // finally, return result
@@ -59,12 +59,35 @@ var eulersNumber = function (precision) {
 exports.π = Math.PI;
 exports.ε = eulersNumber(100);
 exports.φ = (1 + Math.sqrt(5)) / 2;
-console.log(exports.π);
-console.log(exports.ε);
-console.log(exports.φ);
 exports.PI = exports.π;
 exports.EULER = exports.ε;
 exports.GOLDEN = exports.φ;
-// https://github.com/microice333/Python-projects/blob/master/n_digit_e.py
-// find e to nth digit by brothers' formulae: http://www.intmath.com/exponential-logarithmic-functions/calculating-e.php
-// import decimal
+Number.prototype.round = function round() {
+    return Math.round(this);
+};
+Number.prototype.floor = function floor() {
+    return Math.floor(this);
+};
+Number.prototype.ceil = function ceil() {
+    return Math.ceil(this);
+};
+console.log((5.23).round());
+// round()
+// floor()
+// ceil()
+// pad(x, y)
+// degToRad(n)
+// radToDeg(n)
+// toDollars(amount)
+// toDollars(3.9) -> $3.90
+// toDollars(0.99) -> ¢0.99
+// intFormat(amount, countryCode, style)
+// tax(rate) - Returns the tax amount
+// withTax(rate) - returns the amount with tax
+// interest() - https://stackoverflow.com/questions/28325001/how-to-calculate-interest-javascript
+// mortage(principal, numberOfPayments, interestRate) - https://stackoverflow.com/questions/17101442/how-to-calculate-mortgage-in-javascrip
+// intToHex(int) -> #332211 - https://stackoverflow.com/questions/57803/how-to-convert-decimal-to-hexadecimal-in-javascript
+// Random functions
+// random(n) - returns an integer from 0 to n - 1
+// randomRange(min, max) - returns an integer between min and max
+// randomColor() -
