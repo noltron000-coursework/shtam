@@ -62,25 +62,68 @@ exports.φ = (1 + Math.sqrt(5)) / 2;
 exports.PI = exports.π;
 exports.EULER = exports.ε;
 exports.GOLDEN = exports.φ;
-Number.prototype.round = function round() {
+Number.prototype.round = function () {
     return Math.round(this);
 };
-Number.prototype.floor = function floor() {
+Number.prototype.floor = function () {
     return Math.floor(this);
 };
-Number.prototype.ceil = function ceil() {
+Number.prototype.ceil = function () {
     return Math.ceil(this);
 };
-console.log((5.23).round());
-// round()
-// floor()
-// ceil()
-// pad(x, y)
-// degToRad(n)
-// radToDeg(n)
+Number.prototype.trunc = function () {
+    return Math.trunc(this);
+};
+Number.prototype.toRadians = function () {
+    // assumes number is in degrees
+    return (this * exports.π) / 180;
+};
+Number.prototype.toDegrees = function () {
+    // assumes number is in radians
+    return (this * 180) / exports.π;
+};
+Number.prototype.pad = function (paddingLeft, paddingRight) {
+    if (paddingLeft === void 0) { paddingLeft = 0; }
+    if (paddingRight === void 0) { paddingRight = 0; }
+    // numbers drop extra zeroes, so we need a string
+    var numString = String(this);
+    // the decimal point determines whats left and right
+    var numSplit = numString.split('.');
+    // left and right of decimal point
+    var left = numSplit[0];
+    var right = '';
+    if (numSplit.length === 2) {
+        right = numSplit[1];
+    }
+    // pad either side of the decimal
+    left = '0' * paddingLeft + left;
+    right = right + '0' * paddingRight;
+    // add a decimal if the right side exists
+    if (right) {
+        right = '.' + right;
+    }
+    // the padded number is just left + right
+    return left + right;
+};
+Number.prototype.toDollars = function () {
+    var value = 1;
+    value *= this;
+    value *= 100;
+    value = value.trunc();
+    value /= 100;
+    return '$ ' + String(value);
+};
+Number.prototype.toCents = function () {
+    var value = 1;
+    value *= this;
+    value *= 100;
+    value = value.trunc();
+    return String(value) + ' ¢';
+};
+console.log((-24.429999).toCents());
 // toDollars(amount)
 // toDollars(3.9) -> $3.90
-// toDollars(0.99) -> ¢0.99
+// toDollars(0.99) -> 99¢
 // intFormat(amount, countryCode, style)
 // tax(rate) - Returns the tax amount
 // withTax(rate) - returns the amount with tax

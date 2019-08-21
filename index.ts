@@ -68,19 +68,33 @@ export const PI: number = π
 export const EULER: number = ε
 export const GOLDEN: number = φ
 
-Number.prototype.round = function round(): number {
+Number.prototype.round = function(): number {
 	return Math.round(this)
 }
 
-Number.prototype.floor = function floor(): number {
+Number.prototype.floor = function(): number {
 	return Math.floor(this)
 }
 
-Number.prototype.ceil = function ceil(): number {
+Number.prototype.ceil = function(): number {
 	return Math.ceil(this)
 }
 
-Number.prototype.pad = function pad(
+Number.prototype.trunc = function(): number {
+	return Math.trunc(this)
+}
+
+Number.prototype.toRadians = function(): number {
+	// assumes number is in degrees
+	return (this * π) / 180
+}
+
+Number.prototype.toDegrees = function(): number {
+	// assumes number is in radians
+	return (this * 180) / π
+}
+
+Number.prototype.pad = function(
 	paddingLeft: number = 0,
 	paddingRight: number = 0,
 ): string {
@@ -92,7 +106,7 @@ Number.prototype.pad = function pad(
 	// left and right of decimal point
 	let left: string = numSplit[0]
 	let right: string = ''
-	if (len(numSplit) === 2) {
+	if (numSplit.length === 2) {
 		right = numSplit[1]
 	}
 
@@ -108,17 +122,22 @@ Number.prototype.pad = function pad(
 	return left + right
 }
 
-Number.prototype.toRadians = function(degrees: number): number {
-	return (degrees * π) / 180
+Number.prototype.toDollars = function(): string {
+	let value: number = 1
+	value *= this
+	value *= 100
+	value = value.trunc()
+	value /= 100
+	return '$ ' + String(value)
 }
 
-Number.prototype.toDegrees = function(radians: number): number {
-	return (radians * 180) / π
+Number.prototype.toCents = function(): string {
+	let value: number = 1
+	value *= this
+	value *= 100
+	value = value.trunc()
+	return String(value) + ' ¢'
 }
-
-// toDollars(amount)
-// toDollars(3.9) -> $3.90
-// toDollars(0.99) -> ¢0.99
 
 // intFormat(amount, countryCode, style)
 
