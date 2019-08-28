@@ -123,6 +123,7 @@ Number.prototype.pad = function(
 }
 
 Number.prototype.toDollars = function(): string {
+	// assumes number is in dollars
 	let value: number = 1
 	value *= this
 	value *= 100
@@ -132,6 +133,7 @@ Number.prototype.toDollars = function(): string {
 }
 
 Number.prototype.toCents = function(): string {
+	// assumes number is in dollars
 	let value: number = 1
 	value *= this
 	value *= 100
@@ -140,15 +142,54 @@ Number.prototype.toCents = function(): string {
 }
 
 // intFormat(amount, countryCode, style)
+Number.prototype.toIntlCurrency = function(
+	locales: string,
+	currencyType: string,
+): string {
+	return new Intl.NumberFormat(locales, {
+		style: 'currency',
+		currency: currencyType,
+	}).format(this)
+}
 
-// tax(rate) - Returns the tax amount
+Number.prototype.taxAmount = function(
+	rate: number,
+): number {
+	return this * rate
+}
 
-// withTax(rate) - returns the amount with tax
+Number.prototype.taxTotal = function(rate: number): number {
+	return this * (rate + 1)
+}
 
-// interest() - https://stackoverflow.com/questions/28325001/how-to-calculate-interest-javascript
-// mortage(principal, numberOfPayments, interestRate) - https://stackoverflow.com/questions/17101442/how-to-calculate-mortgage-in-javascrip
-// intToHex(int) -> #332211 - https://stackoverflow.com/questions/57803/how-to-convert-decimal-to-hexadecimal-in-javascript
-// Random functions
+Number.prototype.interestCompound = function(
+	rate: number,
+	intervals: number,
+): number {
+	return this * (rate + 1) ** intervals
+}
+
+Number.prototype.interestSimple = function(
+	rate: number,
+	intervlas: number,
+): number {
+	return this * (rate * intervals + 1)
+}
+
+Number.prototype.mortgage = function(
+	rate: number,
+	intervals: number,
+): number {
+	return this.interestCompound(rate, intervals) / intervals
+}
+
+String.prototype.toBase = function(
+	before: number = 10,
+	after: number = 16,
+): string {
+	return parseInt(this, before).toString(after)
+}
+
 // random(n) - returns an integer from 0 to n - 1
 // randomRange(min, max) - returns an integer between min and max
 // randomColor() -

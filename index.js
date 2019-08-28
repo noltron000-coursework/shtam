@@ -106,6 +106,7 @@ Number.prototype.pad = function (paddingLeft, paddingRight) {
     return left + right;
 };
 Number.prototype.toDollars = function () {
+    // assumes number is in dollars
     var value = 1;
     value *= this;
     value *= 100;
@@ -114,22 +115,41 @@ Number.prototype.toDollars = function () {
     return '$ ' + String(value);
 };
 Number.prototype.toCents = function () {
+    // assumes number is in dollars
     var value = 1;
     value *= this;
     value *= 100;
     value = value.trunc();
     return String(value) + ' ¢';
 };
-console.log((-24.429999).toCents());
-// toDollars(amount)
-// toDollars(3.9) -> $3.90
-// toDollars(0.99) -> 99¢
 // intFormat(amount, countryCode, style)
-// tax(rate) - Returns the tax amount
-// withTax(rate) - returns the amount with tax
-// interest() - https://stackoverflow.com/questions/28325001/how-to-calculate-interest-javascript
-// mortage(principal, numberOfPayments, interestRate) - https://stackoverflow.com/questions/17101442/how-to-calculate-mortgage-in-javascrip
-// intToHex(int) -> #332211 - https://stackoverflow.com/questions/57803/how-to-convert-decimal-to-hexadecimal-in-javascript
+Number.prototype.toIntlCurrency = function (locales, currencyType) {
+    return new Intl.NumberFormat(locales, {
+        style: 'currency',
+        currency: currencyType
+    }).format(this);
+};
+Number.prototype.taxAmount = function (rate) {
+    return this * rate;
+};
+Number.prototype.taxTotal = function (rate) {
+    return this * (rate + 1);
+};
+Number.prototype.interestCompound = function (rate, intervals) {
+    return this * Math.pow((rate + 1), intervals);
+};
+Number.prototype.interestSimple = function (rate, intervlas) {
+    return this * (rate * intervals + 1);
+};
+Number.prototype.mortgage = function (rate, intervals) {
+    return this.interestCompound(rate, intervals) / intervals;
+};
+String.prototype.toBase = function (before, after) {
+    if (before === void 0) { before = 10; }
+    if (after === void 0) { after = 16; }
+    return parseInt(this, before).toString(after);
+};
+console.log('4432'.toBase(10, 16));
 // Random functions
 // random(n) - returns an integer from 0 to n - 1
 // randomRange(min, max) - returns an integer between min and max
