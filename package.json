@@ -1,6 +1,6 @@
 {
 	"name": "arithmetical",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "a package library for numbers :)",
 	"main": "arithmetical.ts",
 	"repository": {

@@ -1,11 +1,10 @@
 
 # Numbers &amp; Math Library
-> Check out this package on [`npm`]() &amp; [`GitHub`](https://github.com/noltron000/numbers)!
+> Check out this package on [`npm`]() &amp; [`GitHub`](https://github.com/noltron000/arithmetical)!
 
 This awesome library does some swanky stuff with your numbers.
 You can almost hear the digits cry out in glee!
-
-> ## ***<p style="color: magenta;">Arithmetical!</p>***
+> ### ***<div style="color: magenta;">Arithmetical!</div>***
 
 Addition, Subtraction, and Division&mdash;*oh my!*
 You can dignify your digits in so many varieties and flavors.
