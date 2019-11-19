@@ -1,9 +1,20 @@
-[![Coverage Status](https://coveralls.io/repos/github/noltron000/numbers/badge.svg?branch=master)](https://coveralls.io/github/noltron000/numbers?branch=master)
-![](https://img.shields.io/github/issues/noltron000/numbers)
-![](https://img.shields.io/github/forks/noltron000/numbers)
-![](https://img.shields.io/github/stars/noltron000/numbers)
-![](https://img.shields.io/github/license/noltron000/numbers)
-![](https://img.shields.io/twitter/url/https/github.com%2Fnoltron000%2Fnumbers)
 
-# Numbers &amp; Math Livbrary
+# Numbers &amp; Math Library
 > Check out this package on [`npm`]() &amp; [`GitHub`](https://github.com/noltron000/numbers)!
+
+This awesome library does some swanky stuff with your numbers.
+You can almost hear the digits cry out in glee!
+
+> ## ***<p style="color: magenta;">Arithmetical!</p>***
+
+Addition, Subtraction, and Division&mdash;*oh my!*
+You can dignify your digits in so many varieties and flavors.
+Not sold?
+
+## Try it for Yourself
+This package is available on `npm`.
+
+Steps to install:
+1. type `things` in your terminal
+1. ???
+1. *profit*

@@ -2,30 +2,27 @@
 	"name": "@noltron000/numbers",
 	"version": "0.0.0",
 	"description": "a package library for numbers :)",
-	"main": "numbers.js",
+	"main": "arithmetical.ts",
 	"scripts": {
-		"test": "jest",
-		"coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/noltron000/numbers.git"
+		"url": "git+https://github.com/noltron000/arithmetical.git"
 	},
 	"keywords": [
+		"arithmetical",
+		"arithmetic",
+		"calculator",
 		"number",
-		"numbers",
-		"math",
-		"mathematics"
+		"digit",
+		"math"
 	],
 	"author": "noltron000",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/noltron000/numbers/issues"
+		"url": "https://github.com/noltron000/arithmetical/issues"
 	},
-	"homepage": "https://github.com/noltron000/numbers#readme",
+	"homepage": "https://github.com/noltron000/arithmetical#readme",
 	"devDependencies": {
-		"coveralls": "^3.0.5",
-		"eslint": "^6.1.0",
-		"jest": "^24.8.0"
 	}
 }
