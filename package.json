@@ -1,10 +1,8 @@
 {
-	"name": "@noltron000/numbers",
-	"version": "0.0.0",
+	"name": "arithmetical",
+	"version": "0.0.1",
 	"description": "a package library for numbers :)",
 	"main": "arithmetical.ts",
-	"scripts": {
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/noltron000/arithmetical.git"
@@ -24,5 +22,12 @@
 	},
 	"homepage": "https://github.com/noltron000/arithmetical#readme",
 	"devDependencies": {
-	}
+		"@types/jest": "^24.0.21",
+		"coveralls": "^3.0.7",
+		"jest": "^24.9.0",
+		"ts-jest": "^24.1.0",
+		"typescript": "^3.6.4"
+	},
+	"dependencies": {},
+	"scripts": {}
 }
