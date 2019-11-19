@@ -29,5 +29,8 @@
 		"typescript": "^3.6.4"
 	},
 	"dependencies": {},
-	"scripts": {}
+	"scripts": {
+		"test": "jest --coverage",
+		"test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+	}
 }

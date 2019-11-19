@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"declarationDir": "./esm",
+		"outDir": "./esm",
+		"module": "es6",
+		"target": "es6",
+		"noImplicitAny": true,
+		"moduleResolution": "node"
+	},
+	"exclude": ["node_modules"]
+}
