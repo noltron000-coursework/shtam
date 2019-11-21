@@ -7,3 +7,5 @@
 
 # Numbers &amp; Math Livbrary
 > Check out this package on [`npm`]() &amp; [`GitHub`](https://github.com/noltron000/numbers)!
+
+See https://github.com/Make-School-Courses/FEW-2.1-Writing-JavaScript-Libraries/blob/master/assignments/assignment-05.md
