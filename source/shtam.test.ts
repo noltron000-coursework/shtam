@@ -1,4 +1,4 @@
-const numbers = require('./numbers.js')
+import * as shtam from './shtam'
 
 test('sanity check', () => {})
 
