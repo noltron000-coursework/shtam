@@ -102,6 +102,48 @@ export const formatCents = (amount: number): string => {
 	return amount.toString() + ' ¢'
 }
 
+/*
+	CHALLENGE 7:
+	taxes
+*/
+
+export const taxAmount = (rate: number): number => {
+	return this * rate
+}
+
+export const taxTotal = (rate: number): number => {
+	return this * (rate + 1)
+}
+
+/*
+	CHALLENGES 8 & 9:
+	interest rates
+*/
+
+export const interestCompound = (
+	amount: number,
+	rate: number,
+	intervals: number
+): number => {
+	return amount * (rate + 1) ** intervals
+}
+
+export const interestSimple = (
+	amount: number,
+	rate: number,
+	intervals: number
+): number => {
+	return amount * (rate * intervals + 1)
+}
+
+export const mortgage = (
+	amount: number,
+	rate: number,
+	intervals: number
+): number => {
+	return interestCompound(amount, rate, intervals) / intervals
+}
+
 /* 
 	CHALLENGE B:
 	implement euler's number w/precision.

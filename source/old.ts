@@ -53,37 +53,6 @@ Number.prototype.toIntlCurrency = function(
 	}).format(this)
 }
 
-Number.prototype.taxAmount = function(
-	rate: number,
-): number {
-	return this * rate
-}
-
-Number.prototype.taxTotal = function(rate: number): number {
-	return this * (rate + 1)
-}
-
-Number.prototype.interestCompound = function(
-	rate: number,
-	intervals: number,
-): number {
-	return this * (rate + 1) ** intervals
-}
-
-Number.prototype.interestSimple = function(
-	rate: number,
-	intervlas: number,
-): number {
-	return this * (rate * intervals + 1)
-}
-
-Number.prototype.mortgage = function(
-	rate: number,
-	intervals: number,
-): number {
-	return this.interestCompound(rate, intervals) / intervals
-}
-
 String.prototype.toBase = function(
 	before: number = 10,
 	after: number = 16,
