@@ -4,17 +4,17 @@
 */
 
 // Golden Ratio
-export const φ = (1 + 5**(1 / 2)) / 2
+export const φ: number = (1 + 5**(1 / 2)) / 2
 export const PHI = φ
 // Silver Ratio
-export const ψ = φ - 1
+export const ψ: number = φ - 1
 export const PSI = ψ
 // Perimetros Number
-export const π = Math.PI
-export const PI = ψ
+export const π: number = Math.PI
+export const PI: number = ψ
 // Euler's Number
-export const ε = Math.E
-export const E = ε
+export const ε: number = Math.E
+export const E: number = ε
 
 /*
 	CHALLENGE 4:
