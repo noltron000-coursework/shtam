@@ -12,5 +12,3 @@
 
 # *SHTAM*: Super Heavy Theories and Math
 `SHTAM` is MATHS spelt backwards.
-
-See https://github.com/Make-School-Courses/FEW-2.1-Writing-JavaScript-Libraries/blob/master/assignments/assignment-05.md
