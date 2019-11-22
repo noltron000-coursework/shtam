@@ -1,31 +1,36 @@
 {
-	"name": "@noltron000/numbers",
-	"version": "0.0.0",
+	"name": "arithmetical",
+	"version": "0.0.2",
 	"description": "a package library for numbers :)",
-	"main": "numbers.js",
-	"scripts": {
-		"test": "jest",
-		"coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
-	},
+	"main": "arithmetical.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/noltron000/numbers.git"
+		"url": "git+https://github.com/noltron000/arithmetical.git"
 	},
 	"keywords": [
+		"arithmetical",
+		"arithmetic",
+		"calculator",
 		"number",
-		"numbers",
-		"math",
-		"mathematics"
+		"digit",
+		"math"
 	],
 	"author": "noltron000",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/noltron000/numbers/issues"
+		"url": "https://github.com/noltron000/arithmetical/issues"
 	},
-	"homepage": "https://github.com/noltron000/numbers#readme",
+	"homepage": "https://github.com/noltron000/arithmetical#readme",
 	"devDependencies": {
-		"coveralls": "^3.0.5",
-		"eslint": "^6.1.0",
-		"jest": "^24.8.0"
+		"@types/jest": "^24.0.21",
+		"coveralls": "^3.0.7",
+		"jest": "^24.9.0",
+		"ts-jest": "^24.1.0",
+		"typescript": "^3.6.4"
+	},
+	"dependencies": {},
+	"scripts": {
+		"test": "jest --coverage",
+		"test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
 	}
 }
