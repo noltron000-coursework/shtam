@@ -86,6 +86,26 @@ export const factorialMemo = (n: number): number[] => {
 	return productList
 }
 
+/*
+	CHALLENGE 6:
+	cash money
+*/
+
+export const formatDollars = (amount: number): string => {
+	// assumes number is in dollars
+	amount *= 100
+	amount = amount.trunc()
+	amount /= 100
+	return '$ ' + String(amount)
+}
+
+export const formatCents = (amount: number): string => {
+	// assumes number is in dollars
+	amount *= 100
+	amount = amount.trunc()
+	return String(amount) + ' ¢'
+}
+
 /* 
 	CHALLENGE B:
 	implement euler's number w/precision.

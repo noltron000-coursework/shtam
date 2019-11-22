@@ -42,25 +42,6 @@ Number.prototype.pad = function(
 	return left + right
 }
 
-Number.prototype.toDollars = function(): string {
-	// assumes number is in dollars
-	let value: number = 1
-	value *= this
-	value *= 100
-	value = value.trunc()
-	value /= 100
-	return '$ ' + String(value)
-}
-
-Number.prototype.toCents = function(): string {
-	// assumes number is in dollars
-	let value: number = 1
-	value *= this
-	value *= 100
-	value = value.trunc()
-	return String(value) + ' ¢'
-}
-
 // intFormat(amount, countryCode, style)
 Number.prototype.toIntlCurrency = function(
 	locales: string,
