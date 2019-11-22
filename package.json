@@ -1,28 +1,25 @@
 {
-	"name": "@noltron000/numbers",
-	"version": "0.0.0",
+	"name": "shtam",
+	"version": "0.0.3",
 	"description": "a package library for numbers :)",
-	"main": "numbers.js",
-	"scripts": {
-		"test": "jest",
-		"coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
-	},
+	"main": "shtam.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/noltron000/numbers.git"
+		"url": "git+https://github.com/noltron000/shtam.git"
 	},
 	"keywords": [
 		"number",
-		"numbers",
+		"digit",
 		"math",
-		"mathematics"
+		"maths",
+		"shtam"
 	],
 	"author": "noltron000",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/noltron000/numbers/issues"
+		"url": "https://github.com/noltron000/shtam/issues"
 	},
-	"homepage": "https://github.com/noltron000/numbers#readme",
+	"homepage": "https://github.com/noltron000/shtam#readme",
 	"devDependencies": {
 		"coveralls": "^3.0.5",
 		"eslint": "^6.1.0",
