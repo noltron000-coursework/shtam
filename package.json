@@ -8,6 +8,9 @@
 		"url": "git+https://github.com/noltron000/shtam.git"
 	},
 	"keywords": [
+		"arithmetical",
+		"arithmetic",
+		"calculator",
 		"number",
 		"digit",
 		"math",
@@ -21,8 +24,15 @@
 	},
 	"homepage": "https://github.com/noltron000/shtam#readme",
 	"devDependencies": {
-		"coveralls": "^3.0.5",
-		"eslint": "^6.1.0",
-		"jest": "^24.8.0"
+		"@types/jest": "^24.0.21",
+		"coveralls": "^3.0.7",
+		"jest": "^24.9.0",
+		"ts-jest": "^24.1.0",
+		"typescript": "^3.6.4"
+	},
+	"dependencies": {},
+	"scripts": {
+		"test": "jest --coverage",
+		"test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
 	}
 }

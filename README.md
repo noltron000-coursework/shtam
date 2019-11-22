@@ -12,5 +12,18 @@
 
 # *SHTAM*: Super Heavy Theories and Math
 `SHTAM` is MATHS spelt backwards.
+This awesome library does some swanky stuff with your numbers.
+You can almost hear the digits cry out in glee!
+> ### ***<div style="color: magenta;">Arithmetical!</div>***
 
-See https://github.com/Make-School-Courses/FEW-2.1-Writing-JavaScript-Libraries/blob/master/assignments/assignment-05.md
+Addition, Subtraction, and Division&mdash;*oh my!*
+You can dignify your digits in so many varieties and flavors.
+Not sold?
+
+## Try it for Yourself
+This package is available on `npm`.
+
+Steps to install:
+1. type `things` in your terminal
+1. ???
+1. *profit*
