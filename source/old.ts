@@ -53,13 +53,6 @@ Number.prototype.toIntlCurrency = function(
 	}).format(this)
 }
 
-String.prototype.toBase = function(
-	before: number = 10,
-	after: number = 16,
-): string {
-	return parseInt(this, before).toString(after)
-}
-
 // random(n) - returns an integer from 0 to n - 1
 // randomRange(min, max) - returns an integer between min and max
 // randomColor() -

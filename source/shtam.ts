@@ -88,6 +88,19 @@ export const mortgage = (
 }
 
 /*
+	CHALLENGE 10:
+	base N
+*/
+
+export const toBase = (
+	number: number,
+	before: number = 10,
+	after: number = 16,
+): string {
+	return parseInt(amount, before).toString(after)
+}
+
+/*
 	CHALLENGE A:
 	implement factorial.
 */
@@ -110,7 +123,7 @@ export const factorial = (n: number): number => {
 	return product
 }
 
-export const factorialMemo = (n: number): number[] => {
+const factorialMemo = (n: number): number[] => {
 	let productList: number[] = []
 
 	const memo = (i: number): number => {
@@ -149,7 +162,7 @@ export const factorialMemo = (n: number): number[] => {
 	implement euler's number w/precision.
 */
 
-const eulersNumber = (precision: number): number => {
+export const eulersNumber = (precision: number): number => {
 	let e: number = 0
 	// need every factorial from 0 to n
 	const factorialList: number[] = factorialMemo(precision)
