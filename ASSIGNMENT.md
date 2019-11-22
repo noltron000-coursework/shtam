@@ -59,7 +59,7 @@ This will include a description of the library, and formatted code samples.
 	- Stretch Goals: Create a currency formatting function that simplifies the use of: [`Intl.NumberFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat)
 		- `intFormat(amount, countryCode, style)`
 - **Challenge 7** `tax(rate)` - Returns the tax amount
-- Example: `tax(rate)` - returns the amount with tax
+	- Example: `tax(rate)` - returns the amount with tax
 - **Challenge 8** `interest(total, year, rate)` - Write a function that calculates the interest over time.
 	- Example: https://stackoverflow.com/questions/28325001/how-to-calculate-interest-javascript
 - **Challenge 9** `mortage(principal, numberOfPayments, interestRate)`.

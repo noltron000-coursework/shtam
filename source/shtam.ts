@@ -92,18 +92,14 @@ export const factorialMemo = (n: number): number[] => {
 */
 
 export const formatDollars = (amount: number): string => {
-	// assumes number is in dollars
-	amount *= 100
-	amount = amount.trunc()
-	amount /= 100
-	return '$ ' + String(amount)
+	// assumes amount is in dollars
+	return '$ ' + amount.toFixed(2)
 }
 
 export const formatCents = (amount: number): string => {
-	// assumes number is in dollars
+	// assumes amount is in dollars
 	amount *= 100
-	amount = amount.trunc()
-	return String(amount) + ' ¢'
+	return amount.toString() + ' ¢'
 }
 
 /* 
