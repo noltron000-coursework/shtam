@@ -61,13 +61,6 @@ const eulersNumber = (precision: number): number => {
 	return e
 }
 
-export const π: number = Math.PI
-export const ε: number = eulersNumber(100)
-export const φ: number = (1 + Math.sqrt(5)) / 2
-export const PI: number = π
-export const EULER: number = ε
-export const GOLDEN: number = φ
-
 Number.prototype.round = function(): number {
 	return Math.round(this)
 }
@@ -82,16 +75,6 @@ Number.prototype.ceil = function(): number {
 
 Number.prototype.trunc = function(): number {
 	return Math.trunc(this)
-}
-
-Number.prototype.toRadians = function(): number {
-	// assumes number is in degrees
-	return (this * π) / 180
-}
-
-Number.prototype.toDegrees = function(): number {
-	// assumes number is in radians
-	return (this * 180) / π
 }
 
 Number.prototype.pad = function(
