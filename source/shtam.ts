@@ -162,7 +162,7 @@ const factorialMemo = (n: number): number[] => {
 	implement euler's number w/precision.
 */
 
-export const eulersNumber = (precision: number): number => {
+export const eulersNumber = (precision: number = 100): number => {
 	let e: number = 0
 	// need every factorial from 0 to n
 	const factorialList: number[] = factorialMemo(precision)
