@@ -30,63 +30,6 @@ export const degToRad = (degrees: number): number => {
 }
 
 /*
-	CHALLENGE A:
-	implement factorial.
-*/
-
-export const factorial = (n: number): number => {
-	let product: number
-
-	if (n === 1 || n === 0) {
-		// base case
-		product = n
-	} else if (n > 1) {
-		// larger positive number
-		product = n * factorial(n - 1)
-	} else {
-		// some other wierd case
-		product = NaN
-	}
-
-	// finally, return result
-	return product
-}
-
-export const factorialMemo = (n: number): number[] => {
-	let productList: number[] = []
-
-	const memo = (i: number): number => {
-		let product: number
-
-		if (i === 0 || i === 1) {
-			// base case
-			product = 1
-		} else if (n > 1) {
-			// larger positive number
-			product = i * productList[i - 1]
-		} else {
-			// some other wierd case
-			product = NaN
-		}
-
-		// finally, return result
-		return product
-	}
-
-	// get a range of numbers from 0 to n+1
-	const range: number[] = Array.from(Array(n + 1).keys())
-
-	// find factorial for each item
-	range.forEach((i: number) => {
-		const product: number = memo(i)
-		productList.push(product)
-	})
-
-	// finally, return resulting list
-	return productList
-}
-
-/*
 	CHALLENGE 6:
 	cash money
 */
@@ -142,6 +85,63 @@ export const mortgage = (
 	intervals: number
 ): number => {
 	return interestCompound(amount, rate, intervals) / intervals
+}
+
+/*
+	CHALLENGE A:
+	implement factorial.
+*/
+
+export const factorial = (n: number): number => {
+	let product: number
+
+	if (n === 1 || n === 0) {
+		// base case
+		product = n
+	} else if (n > 1) {
+		// larger positive number
+		product = n * factorial(n - 1)
+	} else {
+		// some other wierd case
+		product = NaN
+	}
+
+	// finally, return result
+	return product
+}
+
+export const factorialMemo = (n: number): number[] => {
+	let productList: number[] = []
+
+	const memo = (i: number): number => {
+		let product: number
+
+		if (i === 0 || i === 1) {
+			// base case
+			product = 1
+		} else if (n > 1) {
+			// larger positive number
+			product = i * productList[i - 1]
+		} else {
+			// some other wierd case
+			product = NaN
+		}
+
+		// finally, return result
+		return product
+	}
+
+	// get a range of numbers from 0 to n+1
+	const range: number[] = Array.from(Array(n + 1).keys())
+
+	// find factorial for each item
+	range.forEach((i: number) => {
+		const product: number = memo(i)
+		productList.push(product)
+	})
+
+	// finally, return resulting list
+	return productList
 }
 
 /* 
