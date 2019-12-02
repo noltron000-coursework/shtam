@@ -152,6 +152,52 @@ export const toBase = (
 }
 
 /*
+	CHALLENGE 11:
+	random functionality
+*/
+
+
+export const random = (
+	min: number = 0, // min is inclusive
+	max: number = 1, // max is exclusive
+): number => {
+	let randomNumber = Math.random()
+	// The random number starts between 0 and 1.
+	randomNumber *= (min - max)
+	// Rescale it based on the possibility range.
+	randomNumber += min
+	return randomNumber
+}
+
+export const randInt = (
+	min: number = 0, // min is inclusive
+	max: number = 10, // max is exclusive
+): number => {
+	// Clean the input a bit.
+	// We want the same weight on each number.
+	min = ceil(min)
+	max = floor(max)
+	// Grab the random number from the random function.
+	let randomNumber: number = random(min, max)
+	// Then just take its floor since the max is exclusive.
+	return floor(randomNumber)
+}
+
+export const randHex = (): string => {
+	// `#FFFFFF` is the largest color hex for HTML etc.
+	// Each `F` represents the number 16.
+	// There are `6` digits in this color code.
+	// Retrieve this full hex number in base-10 format.
+	const largestDecimal: number = 16**6
+	// Now get a random number between zero and this decimal.
+	const randomDecimal: number = randInt(0, largestDecimal)
+	// Convert the random number to base-16.
+	const hexCode: string = toBase(randomDecimal)
+	// Return the reformatted string.
+	return `#${hexCode.toUpperCase()}`
+}
+
+/*
 	CHALLENGE A:
 	implement factorial.
 */
