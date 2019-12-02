@@ -46,7 +46,7 @@ export const trunc = (number: number): number => {
 export const padZeroes = (
 	number: number,
 	left: number,
-	right: number
+	right: number,
 ): string => {
 	let maybeDecimal: string = ''
 	if (number % 1 == 0 || right == 0) {
@@ -97,14 +97,14 @@ export const formatCents = (amount: number): string => {
 
 export const taxAmount = (
 	amount: number,
-	rate: number
+	rate: number,
 ): number => {
 	return amount * rate
 }
 
 export const taxTotal = (
 	amount: number,
-	rate: number
+	rate: number,
 ): number => {
 	return amount * (rate + 1)
 }
@@ -117,7 +117,7 @@ export const taxTotal = (
 export const interestCompound = (
 	amount: number,
 	rate: number,
-	intervals: number
+	intervals: number,
 ): number => {
 	return amount * (rate + 1) ** intervals
 }
@@ -125,7 +125,7 @@ export const interestCompound = (
 export const interestSimple = (
 	amount: number,
 	rate: number,
-	intervals: number
+	intervals: number,
 ): number => {
 	return amount * (rate * intervals + 1)
 }
@@ -133,7 +133,7 @@ export const interestSimple = (
 export const mortgage = (
 	amount: number,
 	rate: number,
-	intervals: number
+	intervals: number,
 ): number => {
 	return interestCompound(amount, rate, intervals) / intervals
 }
@@ -198,7 +198,7 @@ export const randHex = (): string => {
 }
 
 /*
-	CHALLENGE A:
+	STRETCH CHALLENGE A:
 	implement factorial.
 */
 
@@ -255,7 +255,7 @@ const factorialMemo = (n: number): number[] => {
 }
 
 /*
-	CHALLENGE B:
+	STRETCH CHALLENGE B:
 	implement euler's number w/precision.
 */
 
