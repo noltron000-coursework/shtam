@@ -17,6 +17,27 @@ export const ε: number = Math.E
 export const E: number = ε
 
 /*
+	CHALLENGE 2:
+	make aliases to referenced math functions.
+*/
+
+export const round = (number: number): number => {
+	return Math.round(number)
+}
+
+export const floor = (number: number): number => {
+	return Math.floor(number)
+}
+
+export const ceil = (number: number): number => {
+	return Math.ceil(number)
+}
+
+export const trunc = (number: number): number => {
+	return Math.trunc(number)
+}
+
+/*
 	CHALLENGE 4:
 	define some useful angle functions.
 */
