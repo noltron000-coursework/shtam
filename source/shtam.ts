@@ -62,7 +62,7 @@ export const padZeroes = (
 }
 
 /*
-	CHALLENGE 4:
+	CHALLENGE 4 & 5:
 	define some useful angle functions.
 */
 
