@@ -38,6 +38,30 @@ export const trunc = (number: number): number => {
 }
 
 /*
+	CHALLENGE 3:
+	pads a number with zeroes on the left and right.
+	decimals vs whole numbers makes this a bit trickier.
+*/
+
+export const padZeroes = (
+	number: number,
+	left: number,
+	right: number
+): string => {
+	let maybeDecimal: string = ''
+	if (number % 1 == 0 || right == 0) {
+		// If the number is divisible by 1,
+		// then it is a whole number.
+		// This means it does not have a decimal point.
+		maybeDecimal = maybeDecimal.concat('.')
+	}
+	// Combine the stringified number with the maybeDecimal.
+	let middle: string = `${number.toString()}${maybeDecimal}`
+	// This string literal takes care of the rest.
+	return `${'0'.repeat(left)}${middle}${'0'.repeat(right)}`
+}
+
+/*
 	CHALLENGE 4:
 	define some useful angle functions.
 */
