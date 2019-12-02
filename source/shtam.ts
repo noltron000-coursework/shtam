@@ -38,7 +38,31 @@ export const trunc = (number: number): number => {
 }
 
 /*
-	CHALLENGE 4:
+	CHALLENGE 3:
+	pads a number with zeroes on the left and right.
+	decimals vs whole numbers makes this a bit trickier.
+*/
+
+export const padZeroes = (
+	number: number,
+	left: number,
+	right: number,
+): string => {
+	let maybeDecimal: string = ''
+	if (number % 1 == 0 || right == 0) {
+		// If the number is divisible by 1,
+		// then it is a whole number.
+		// This means it does not have a decimal point.
+		maybeDecimal = maybeDecimal.concat('.')
+	}
+	// Combine the stringified number with the maybeDecimal.
+	let middle: string = `${number.toString()}${maybeDecimal}`
+	// This string literal takes care of the rest.
+	return `${'0'.repeat(left)}${middle}${'0'.repeat(right)}`
+}
+
+/*
+	CHALLENGE 4 & 5:
 	define some useful angle functions.
 */
 
@@ -73,14 +97,14 @@ export const formatCents = (amount: number): string => {
 
 export const taxAmount = (
 	amount: number,
-	rate: number
+	rate: number,
 ): number => {
 	return amount * rate
 }
 
 export const taxTotal = (
 	amount: number,
-	rate: number
+	rate: number,
 ): number => {
 	return amount * (rate + 1)
 }
@@ -93,7 +117,7 @@ export const taxTotal = (
 export const interestCompound = (
 	amount: number,
 	rate: number,
-	intervals: number
+	intervals: number,
 ): number => {
 	return amount * (rate + 1) ** intervals
 }
@@ -101,7 +125,7 @@ export const interestCompound = (
 export const interestSimple = (
 	amount: number,
 	rate: number,
-	intervals: number
+	intervals: number,
 ): number => {
 	return amount * (rate * intervals + 1)
 }
@@ -109,7 +133,7 @@ export const interestSimple = (
 export const mortgage = (
 	amount: number,
 	rate: number,
-	intervals: number
+	intervals: number,
 ): number => {
 	return interestCompound(amount, rate, intervals) / intervals
 }
@@ -128,7 +152,53 @@ export const toBase = (
 }
 
 /*
-	CHALLENGE A:
+	CHALLENGE 11:
+	random functionality
+*/
+
+
+export const random = (
+	min: number = 0, // min is inclusive
+	max: number = 1, // max is exclusive
+): number => {
+	let randomNumber = Math.random()
+	// The random number starts between 0 and 1.
+	randomNumber *= (min - max)
+	// Rescale it based on the possibility range.
+	randomNumber += min
+	return randomNumber
+}
+
+export const randInt = (
+	min: number = 0, // min is inclusive
+	max: number = 10, // max is exclusive
+): number => {
+	// Clean the input a bit.
+	// We want the same weight on each number.
+	min = ceil(min)
+	max = floor(max)
+	// Grab the random number from the random function.
+	let randomNumber: number = random(min, max)
+	// Then just take its floor since the max is exclusive.
+	return floor(randomNumber)
+}
+
+export const randHex = (): string => {
+	// `#FFFFFF` is the largest color hex for HTML etc.
+	// Each `F` represents the number 16.
+	// There are `6` digits in this color code.
+	// Retrieve this full hex number in base-10 format.
+	const largestDecimal: number = 16**6
+	// Now get a random number between zero and this decimal.
+	const randomDecimal: number = randInt(0, largestDecimal)
+	// Convert the random number to base-16.
+	const hexCode: string = toBase(randomDecimal)
+	// Return the reformatted string.
+	return `#${hexCode.toUpperCase()}`
+}
+
+/*
+	STRETCH CHALLENGE A:
 	implement factorial.
 */
 
@@ -185,7 +255,7 @@ const factorialMemo = (n: number): number[] => {
 }
 
 /*
-	CHALLENGE B:
+	STRETCH CHALLENGE B:
 	implement euler's number w/precision.
 */
 
