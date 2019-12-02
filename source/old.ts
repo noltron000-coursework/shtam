@@ -1,19 +1,3 @@
-Number.prototype.round = function(): number {
-	return Math.round(this)
-}
-
-Number.prototype.floor = function(): number {
-	return Math.floor(this)
-}
-
-Number.prototype.ceil = function(): number {
-	return Math.ceil(this)
-}
-
-Number.prototype.trunc = function(): number {
-	return Math.trunc(this)
-}
-
 Number.prototype.pad = function(
 	paddingLeft: number = 0,
 	paddingRight: number = 0,
