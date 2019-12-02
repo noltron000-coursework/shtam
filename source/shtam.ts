@@ -1,4 +1,4 @@
-/* 
+/*
 	CHALLENGE 1:
 	define some irrational constants.
 */
@@ -11,7 +11,7 @@ export const ψ: number = φ - 1
 export const PSI = ψ
 // Perimetros Number
 export const π: number = Math.PI
-export const PI: number = ψ
+export const PI: number = π
 // Euler's Number
 export const ε: number = Math.E
 export const E: number = ε
@@ -50,12 +50,18 @@ export const formatCents = (amount: number): string => {
 	taxes
 */
 
-export const taxAmount = (rate: number): number => {
-	return this * rate
+export const taxAmount = (
+	amount: number,
+	rate: number
+): number => {
+	return amount * rate
 }
 
-export const taxTotal = (rate: number): number => {
-	return this * (rate + 1)
+export const taxTotal = (
+	amount: number,
+	rate: number
+): number => {
+	return amount * (rate + 1)
 }
 
 /*
@@ -96,8 +102,8 @@ export const toBase = (
 	number: number,
 	before: number = 10,
 	after: number = 16,
-): string {
-	return parseInt(amount, before).toString(after)
+): string => {
+	return parseInt(number.toString(), before).toString(after)
 }
 
 /*
@@ -157,7 +163,7 @@ const factorialMemo = (n: number): number[] => {
 	return productList
 }
 
-/* 
+/*
 	CHALLENGE B:
 	implement euler's number w/precision.
 */
