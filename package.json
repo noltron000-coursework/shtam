@@ -1,6 +1,6 @@
 {
 	"name": "shtam",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "a package library for numbers :)",
 	"source": "source/shtam.ts",
 	"main": "umd/shtam.js",

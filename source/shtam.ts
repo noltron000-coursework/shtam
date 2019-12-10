@@ -159,7 +159,7 @@ export const random = (
 ): number => {
 	let randomNumber = Math.random()
 	// The random number starts between 0 and 1.
-	randomNumber *= (min - max)
+	randomNumber *= (max - min)
 	// Rescale it based on the possibility range.
 	randomNumber += min
 	return randomNumber
