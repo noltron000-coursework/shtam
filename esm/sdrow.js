@@ -3,17 +3,13 @@
     define some irrational constants.
 */
 // Golden Ratio
-const φ = (1 + Math.pow(5, (1 / 2))) / 2;
-const PHI = φ;
+const PHI = (1 + Math.pow(5, (1 / 2))) / 2;
 // Silver Ratio
-const ψ = φ - 1;
-const PSI = ψ;
+const PSI = PHI - 1;
 // Perimetros Number
-const π = Math.PI;
-const PI = π;
+const PI = Math.PI;
 // Euler's Number
-const ε = Math.E;
-const E = ε;
+const E = Math.E;
 /*
     CHALLENGE 2:
     make aliases to referenced math functions.
@@ -53,10 +49,10 @@ const padZeroes = (number, left, right) => {
     define some useful angle functions.
 */
 const radToDeg = (radians) => {
-    return radians * 180 / π;
+    return radians * 180 / PI;
 };
 const degToRad = (degrees) => {
-    return degrees * π / 180;
+    return degrees * PI / 180;
 };
 /*
     CHALLENGE 6:
@@ -216,4 +212,4 @@ const eulersNumber = (precision = 100) => {
 // 	}).format(this)
 // }
 
-export { E, PHI, PI, PSI, ceil, degToRad, eulersNumber, factorial, floor, formatCents, formatDollars, interestCompound, interestSimple, mortgage, padZeroes, radToDeg, randHex, randInt, random, round, taxAmount, taxTotal, toBase, trunc, ε, π, φ, ψ };
+export { E, PHI, PI, PSI, ceil, degToRad, eulersNumber, factorial, floor, formatCents, formatDollars, interestCompound, interestSimple, mortgage, padZeroes, radToDeg, randHex, randInt, random, round, taxAmount, taxTotal, toBase, trunc };

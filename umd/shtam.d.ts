@@ -1,10 +1,6 @@
-export declare const φ: number;
 export declare const PHI: number;
-export declare const ψ: number;
 export declare const PSI: number;
-export declare const π: number;
 export declare const PI: number;
-export declare const ε: number;
 export declare const E: number;
 export declare const round: (number: number) => number;
 export declare const floor: (number: number) => number;
