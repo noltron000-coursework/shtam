@@ -4,17 +4,13 @@
 */
 
 // Golden Ratio
-export const φ: number = (1 + 5**(1 / 2)) / 2
-export const PHI = φ
+export const PHI: number = (1 + 5**(1 / 2)) / 2
 // Silver Ratio
-export const ψ: number = φ - 1
-export const PSI = ψ
+export const PSI: number = PHI - 1
 // Perimetros Number
-export const π: number = Math.PI
-export const PI: number = π
+export const PI: number = Math.PI
 // Euler's Number
-export const ε: number = Math.E
-export const E: number = ε
+export const E: number = Math.E
 
 /*
 	CHALLENGE 2:
@@ -67,11 +63,11 @@ export const padZeroes = (
 */
 
 export const radToDeg = (radians: number): number => {
-	return radians * 180 / π
+	return radians * 180 / PI
 }
 
 export const degToRad = (degrees: number): number => {
-	return degrees * π / 180
+	return degrees * PI / 180
 }
 
 /*
