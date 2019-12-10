@@ -2,7 +2,12 @@
 	"name": "shtam",
 	"version": "0.0.3",
 	"description": "a package library for numbers :)",
-	"main": "shtam.ts",
+	"source": "source/shtam.ts",
+	"main": "umd/shtam.js",
+	"module": "esm/sdrow.js",
+	"files": [
+		"umd"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/noltron000/shtam.git"
@@ -37,6 +42,7 @@
 	"dependencies": {},
 	"scripts": {
 		"test": "jest --coverage",
-		"test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+		"test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
+		"rollup": "rollup -c"
 	}
 }
