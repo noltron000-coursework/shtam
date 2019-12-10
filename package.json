@@ -27,6 +27,10 @@
 		"@types/jest": "^24.0.21",
 		"coveralls": "^3.0.7",
 		"jest": "^24.9.0",
+		"rollup": "^1.27.9",
+		"rollup-plugin-terser": "^5.1.2",
+		"rollup-plugin-typescript2": "^0.25.3",
+		"terser": "^4.4.2",
 		"ts-jest": "^24.1.0",
 		"typescript": "^3.6.4"
 	},
